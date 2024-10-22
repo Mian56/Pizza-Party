@@ -40,9 +40,11 @@ fun SplashScreen(navController: NavHostController) {
     }
 
     Column (modifier = Modifier
+        .fillMaxSize()
         .wrapContentSize(Alignment.Center)){
         Image(painter = painterResource(id = R.drawable.fsclogo), contentDescription ="" )
     }
+
 }
 
 
