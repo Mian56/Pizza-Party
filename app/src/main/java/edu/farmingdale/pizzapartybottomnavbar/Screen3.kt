@@ -32,12 +32,17 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun Screen3() {
+    val crlStops = arrayOf(
+        0.0f to Color.Blue,
+        0.5f to Color.White,
+        1.0f to Color.Blue
+    )
     var sliderValue by remember { mutableStateOf(0.5f) }
     var chkd by remember { mutableStateOf(true) }
 
-
     val context = LocalContext.current
-    Column ( modifier = Modifier.padding(horizontal = 20.dp).fillMaxSize(),
+    Column ( modifier = Modifier.
+        background(Brush.verticalGradient(colorStops=crlStops)),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally){
         Slider(value = sliderValue, onValueChange = { sliderValue=it }, Modifier.fillMaxWidth()
