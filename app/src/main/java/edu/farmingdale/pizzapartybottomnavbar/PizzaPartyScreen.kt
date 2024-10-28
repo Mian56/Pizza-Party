@@ -24,12 +24,12 @@ val hungerLevels = listOf("Light", "Medium", "Hungry", "Very hungry") // Added H
 class PizzaPartyViewModel : ViewModel() {
     var totalPizzas by mutableIntStateOf(0)
     var numPeopleInput by mutableStateOf("")
-    var hungerLevel by mutableStateOf("Medium") // Default value
+    var hungerLevel by mutableStateOf("Medium")
 
     fun calculatePizzas() {
         totalPizzas = calculateNumPizzas(numPeopleInput.toInt(), hungerLevel)
     }
-}
+}//task 7 completed with task 6 forgot to commit
 
 @Composable
 fun PizzaPartyScreen(modifier: Modifier = Modifier, viewModel: PizzaPartyViewModel = remember { PizzaPartyViewModel() }) {
