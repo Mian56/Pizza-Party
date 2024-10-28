@@ -42,15 +42,30 @@ fun Screen3() {
 
     val context = LocalContext.current
     Column ( modifier = Modifier.
-        background(Brush.verticalGradient(colorStops=crlStops)),
+        background(Brush.verticalGradient(colorStops=crlStops)) // GRADIENT BACK GROUND
+        .padding(16.dp),
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally){
+        horizontalAlignment = Alignment.CenterHorizontally)
+    {
         Slider(value = sliderValue, onValueChange = { sliderValue=it }, Modifier.fillMaxWidth()
             , enabled = chkd)
 
-        Text (fontSize = 20.sp, text = "Second Screen" )
+        //slider to adjust text value
+        Slider(
+            value = sliderValue,
+            onValueChange = { sliderValue = it},
+            modifier = Modifier.fillMaxWidth(),
+            enabled = chkd
+        )
 
-        Button(onClick = { val newInt = Intent(Intent.ACTION_VIEW)
+        Text (
+            fontSize = (20 + sliderValue * 10).sp, //change font size
+            text = "Slider Value: ${(sliderValue * 100).toInt()}%",
+            modifier = Modifier.padding(top = 16.dp)
+        )
+
+
+            Button(onClick = { val newInt = Intent(Intent.ACTION_VIEW)
             newInt.setData(Uri.parse("tel:6314202000"))
             context.startActivity(newInt) }) {
             Text(fontSize = 20.sp, text ="Call me")
