@@ -63,8 +63,8 @@ fun GpaAppScreen() {
         )
 
         TextField(
-            value = grade1,
-            onValueChange = { grade1 = it },
+            value = grade2,
+            onValueChange = { grade2 = it },
             Modifier
                 .fillMaxWidth()
                 .padding(vertical = 8.dp)
@@ -82,8 +82,8 @@ fun GpaAppScreen() {
 
 
         TextField(
-            value = grade1,
-            onValueChange = { grade1 = it },
+            value = grade3,
+            onValueChange = { grade3 = it },
             Modifier
                 .fillMaxWidth()
                 .padding(vertical = 8.dp)
