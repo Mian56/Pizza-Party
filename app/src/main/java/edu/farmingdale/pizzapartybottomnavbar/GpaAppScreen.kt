@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CornerSize
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -35,30 +36,52 @@ fun GpaAppScreen() {
 
     Column(
         modifier = Modifier
-        ,verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally
+            .fillMaxSize()
+            .background(backColor) //background color
+            .padding(16.dp), //padding
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
         TextField(
             value = grade1,
-            onValueChange = { grade1 = it },Modifier.padding(16.dp),
-            label = { Text("Course 1 Grade")}
+            onValueChange = { grade1 = it },
+           Modifier
+                .fillMaxWidth()
+                .padding(vertical = 8.dp)
+                .border(1.dp,Color.Gray,shape = RoundedCornerShape(8.dp)),
+            label = { Text("Course 1 Grade") },
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number) //Set KeyboardType to Number
+
         )
 
-
         TextField(
-            value = grade2,
-            onValueChange = { grade2 = it },
+            value = grade1,
+            onValueChange = { grade1 = it },
+            Modifier
+                .fillMaxWidth()
+                .padding(vertical = 8.dp)
+                .border(1.dp,Color.Gray,shape = RoundedCornerShape(8.dp)),
             label = { Text("Course 2 Grade") },
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number) //Set KeyboardType to Number
+
         )
 
 
 
         TextField(
-            value = grade3,
-            onValueChange = { grade3 = it },
+            value = grade1,
+            onValueChange = { grade1 = it },
+            Modifier
+                .fillMaxWidth()
+                .padding(vertical = 8.dp)
+                .border(1.dp,Color.Gray,shape = RoundedCornerShape(8.dp)),
             label = { Text("Course 3 Grade") },
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number) //Set KeyboardType to Number
+
         )
 
+        //
 
         Button(onClick = {
             if (btnLabel == "Compute GPA") {
