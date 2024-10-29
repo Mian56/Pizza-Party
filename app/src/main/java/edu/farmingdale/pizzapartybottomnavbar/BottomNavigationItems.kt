@@ -31,3 +31,5 @@ sealed class BottomNavigationItems(
         icon = Icons.Outlined.AccountCircle
     )
 }
+//While trying to figure out
+// todo 8 my entire code crashed. Even after resetting, Was able to do 1-7 but failed 8
