@@ -14,7 +14,7 @@ fun NavigationGraph(navController: NavHostController, onBottomBarVisibilityChang
         }
         composable(BottomNavigationItems.PizzaScreen.route) {
             onBottomBarVisibilityChanged(true)
-           PizzaPartyScreen()
+            PizzaPartyScreen()
         }
         composable(BottomNavigationItems.GpaAppScreen.route) {
             onBottomBarVisibilityChanged(true)

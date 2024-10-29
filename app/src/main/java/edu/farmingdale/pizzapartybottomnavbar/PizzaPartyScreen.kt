@@ -131,7 +131,7 @@ fun calculateNumPizzas(
     val slicesPerPerson = when (hungerLevel) {
         "Light" -> 2
         "Medium" -> 3
-        "Hungry" -> 4 // Added slices for "Hungry" level
+        "Hungry" -> 4 // Added slices for Hungry level
         else -> 5
     }
 
